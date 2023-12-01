@@ -1,0 +1,41 @@
+@layer utilities {
+    .no-zoom {
+      touch-action: manipulation;
+    }
+  }
+
+.btn {
+    @apply px-4 py-2 font-bold rounded cursor-pointer no-zoom;
+}
+
+.btn-primary {
+    @apply text-white bg-blue-500 !important;
+}
+
+.btn-primary:hover {
+    @apply bg-blue-700 !important;
+}
+
+.btn-danger {
+    @apply text-white bg-red-500 !important;
+}
+
+.btn-danger:hover {
+    @apply bg-red-700 !important;
+}
+
+.btn-success {
+    @apply text-white bg-green-500 !important;
+}
+
+.btn-success:hover {
+    @apply bg-green-700 !important;
+}
+
+.btn-secondary {
+    @apply text-white bg-gray-500 !important;
+}
+
+.btn-secondary:hover {
+    @apply bg-gray-700 !important;
+}

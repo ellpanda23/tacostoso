@@ -1,0 +1,34 @@
+.card {
+    @apply overflow-hidden bg-white rounded shadow-lg dark:bg-slate-800;
+}
+
+.card-body,
+.card-footer,
+.card-header {
+    @apply px-6 py-4;
+}
+
+.card-footer,
+.card-header {
+    @apply bg-gray-50 dark:bg-slate-700;
+}
+
+.card-title {
+    @apply mb-2 text-xl font-bold;
+}
+
+.card-text {
+    @apply text-base text-gray-700;
+}
+
+.card-animated:hover {
+    @apply transition duration-300 transform scale-110 shadow-lg bg-gray-50;
+}
+
+.card-animated-content:hover {
+    @apply px-2 py-4 transition duration-300 transform scale-110 rounded-lg shadow-lg bg-gray-50;
+}
+
+.card-legend {
+    @apply text-xl text-center text-gray-500 uppercase;
+}
