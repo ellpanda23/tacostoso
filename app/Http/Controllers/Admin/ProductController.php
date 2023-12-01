@@ -50,7 +50,7 @@ class ProductController extends Controller
 
         // return storage_path();
 
-        return $ruta = storage_path().'\app\public\products/'.$name;
+        $ruta = storage_path().'\app\public\products/'.$name;
 
         Image::make($request->file('file'))
             ->resize(1200, null, function ($constraint) {
