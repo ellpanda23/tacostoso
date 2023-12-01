@@ -42,7 +42,7 @@
     <div class="col-md-6">
         <div class="image-wrapper">
             @isset($product->image)
-                <img id="picture" src="{{asset($product->image)}}" alt="">
+                <img id="picture" src="{{Storage::url($product->image)}}" alt="">
             @else
                 <img id="picture" src="https://cdn.pixabay.com/photo/2020/07/08/10/17/car-5383371_960_720.jpg" alt="">
             @endisset

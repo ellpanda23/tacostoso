@@ -46,21 +46,11 @@ class ProductController extends Controller
 
         // $url = Storage::url($imagen);
 
-        $name = Str::random(10).$request->file('file')->getClientOriginalName();
-
-        // return storage_path();
-
-        $ruta = storage_path().'\app\public\products/'.$name;
-
-        Image::make($request->file('file'))
-            ->resize(1200, null, function ($constraint) {
-                $constraint->aspectRatio();
-            })
-            ->save($ruta);
+        $url = Storage::put('products', $request->file('file'));
 
         $product = Product::create($request->all());
 
-        $product->image = '/storage/products/'.$name;
+        $product->image = $url;
 
         $product->save();
 
